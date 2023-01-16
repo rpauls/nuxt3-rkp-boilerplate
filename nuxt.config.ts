@@ -53,5 +53,21 @@ export default defineNuxtConfig({
   // delayHydration: {
   //   // enables nuxt-delay-hydration in dev mode for testing
   //   debug: process.env.NODE_ENV === 'development'
-  // }
+  // },
+  // https://i18n.nuxtjs.org/basic-usage/
+  i18n: {
+    locales: ['en', 'de'],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+    },
+  },
+  // https://github.com/johannschopplich/nuxt-api-party#basic-usage
+  apiParty: {
+    endpoints: {
+      'json-placeholder': {
+        url: 'https://jsonplaceholder.typicode.com',
+      },
+    }
+  }
 })
